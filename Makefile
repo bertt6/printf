@@ -1,10 +1,10 @@
 NAME = libftprintf.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-SRC_FILES = printf.c      \
-			source.c
+SRC_FILES = ft_printf.c      \
+			ft_source.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
-HEADER = printf.h
+HEADER = ft_printf.h
 RM = rm -rf
 all:	$(NAME)
 %.o: %.c $(HEADER)
@@ -16,3 +16,4 @@ clean:
 fclean: clean
 		$(RM) $(NAME)
 re: fclean all
+.PHONY: clean fclean re
